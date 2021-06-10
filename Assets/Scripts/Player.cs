@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private float horizontalInput;
     private Rigidbody rigidbodyComponent;
     private int superJumpsRemaining;
+    public int coins = 0;
 
     public GameOverScreen GameOverScreen;
     public AudioSource backgroundAudio;
@@ -45,15 +46,14 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (transform.position.y < -1)
+        if (transform.position.y < -3)
         {
             backgroundAudio.PlayOneShot(audioClip, 0.5f);
-            
         }
 
-        if (transform.position.y < 0)
+        if (transform.position.y < -4)
         {
-            GameOverScreen.Setup(10);
+            GameOverScreen.Setup(coins*5);
         }
 
         rigidbodyComponent.velocity = new Vector3(horizontalInput*3 , rigidbodyComponent.velocity.y, 0);
@@ -83,6 +83,7 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject);
             superJumpsRemaining++;
+            coins++;
         }
 
     }
