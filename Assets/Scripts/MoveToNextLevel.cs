@@ -10,6 +10,10 @@ public class MoveToNextLevel : MonoBehaviour
     void Start()
     {
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        if(nextSceneLoad == 4)
+        {
+            nextSceneLoad = 0;
+        }
     }
 
     public void OnTriggerEnter(Collider other)

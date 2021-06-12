@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -12,10 +13,11 @@ public class Player : MonoBehaviour
     private Rigidbody rigidbodyComponent;
     private int superJumpsRemaining;
     public int coins = 0;
-
+    public int health = 100;
     public GameOverScreen GameOverScreen;
     public AudioSource backgroundAudio;
     public AudioClip audioClip;
+    public Slider slider;
 
 
     // Start is called before the first frame update
@@ -46,13 +48,14 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (transform.position.y < -3)
+        if (transform.position.y < -6)
         {
             backgroundAudio.PlayOneShot(audioClip, 0.5f);
         }
 
-        if (transform.position.y < -4)
+        if (transform.position.y < -7)
         {
+            slider.value = 0;
             GameOverScreen.Setup(coins*5);
         }
 
@@ -84,6 +87,17 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             superJumpsRemaining++;
             coins++;
+        }
+
+        if(other.gameObject.layer == 7)
+        {
+            health -= 25;
+            slider.value -= 25;
+            if (health <= 0)
+            {
+                backgroundAudio.PlayOneShot(audioClip, 0.5f);
+                GameOverScreen.Setup(coins * 5);
+            }
         }
 
     }
