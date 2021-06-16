@@ -1,6 +1,6 @@
 # Unio
 
-A Unity game designed and developed by our development team including: [Antonio Marian Bigan](https://github.com/antonio-b21), [Răzvan Alexandru Guță](https://github.com/razvanguta), [Radu Andrei Negulescu](), [Dan Gabriel Nimară](https://github.com/DanNimara), [Irina Păvălașc](https://github.com/IrinaPavalasc).
+A Unity game designed and developed by our development team including: [Antonio Marian Bigan](https://github.com/antonio-b21), [Răzvan Alexandru Guță](https://github.com/razvanguta), [Radu Andrei Negulescu](https://github.com/radunegulescu), [Dan Gabriel Nimară](https://github.com/DanNimara), [Irina Păvălașc](https://github.com/IrinaPavalasc).
 
 ## Design and Build Tool
 
