@@ -4,7 +4,7 @@ A Unity game designed and developed by our development team including: [Antonio 
 
 ## Design and Build Tool
 
-Unio is a multi-level platform runner game inspired by the classic video game Super Mario Bros designed using **Unity Build Tool with C#**. We created the environment, including the player, the platforms, the moving background from scratch. From the start we wanted to have collectibles, even power-ups and stats which we managed to implement.
+Unio is a multi-level platform runner game inspired by the classic video game Super Mario Bros designed using **Unity ProBuilder as a build tool with C#**. We created the environment, including the player, the platforms, the moving background from scratch. From the start we wanted to have collectibles, even power-ups and stats which we managed to implement.
 
 ## Agile and Trello
 
